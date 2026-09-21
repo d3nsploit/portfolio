@@ -1,0 +1,1 @@
+Replace this folder's placeholder with your own photo named couple.jpg.

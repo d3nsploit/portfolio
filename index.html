@@ -1,3 +1,272 @@
-<html>
-  <h1>Happy Birthday Anjee</h1>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#120b16">
+<title>Untuk Sayang ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#120b16; --bg2:#24101f; --rose:#ff7fa3; --gold:#f6d59a;
+  --cream:#fff5ed; --muted:#d9bdc9; --glass:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-3;
+  background:radial-gradient(circle at 20% 20%,#7c284c55,transparent 30%),
+             radial-gradient(circle at 80% 70%,#e3a85a22,transparent 28%),
+             linear-gradient(135deg,var(--bg),var(--bg2) 55%,#100812);
+}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.5;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.12;transform:scale(.5)}}
+
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 22px;position:relative}
+.container{width:min(1050px,100%);margin:auto}
+.hero{text-align:center}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--gold);margin-bottom:22px}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600}
+h1{font-size:clamp(4rem,13vw,9rem);line-height:.78;margin:0 0 25px}
+h1 span{color:var(--rose);font-style:italic}
+.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.8}
+.scroll{margin-top:55px;color:#ffffff99;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.heart{display:inline-block;color:var(--rose);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+
+.reveal{opacity:0;transform:translateY(28px);transition:1s ease}
+.reveal.show{opacity:1;transform:none}
+
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{
+  background:var(--glass);border:1px solid #ffffff15;border-radius:28px;
+  padding:36px;backdrop-filter:blur(16px);box-shadow:0 20px 70px #0004;
+}
+.card h2{font-size:2.5rem;margin:0 0 15px}
+.card p{color:var(--muted);line-height:1.9;margin:0}
+.quote{font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1.25;color:var(--cream)}
+.accent{color:var(--rose)}
+
+.timeline{display:grid;gap:18px;margin-top:28px}
+.memory{display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:start}
+.num{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;border:1px solid #ffffff25;color:var(--gold)}
+.memory h3{margin:2px 0 7px;font-size:1rem}.memory p{margin:0;color:var(--muted);line-height:1.7}
+
+.photo-section{text-align:center}
+.photo-frame{
+  width:min(700px,100%);aspect-ratio:16/9;margin:30px auto;border-radius:30px;
+  border:1px solid #ffffff1c;background:
+    linear-gradient(135deg,#ffffff0b,#ffffff03),
+    repeating-linear-gradient(45deg,#ffffff04 0 2px,transparent 2px 8px);
+  display:grid;place-items:center;overflow:hidden;position:relative;
+}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:none}
+.photo-placeholder{padding:30px;color:#d9bdc9aa}
+.photo-placeholder b{display:block;color:var(--cream);font-family:"Cormorant Garamond";font-size:2rem;margin-bottom:8px}
+
+.letter{max-width:760px;margin:auto}
+.letter-paper{
+  background:#fff8f0;color:#3c2430;border-radius:30px;padding:clamp(30px,6vw,65px);
+  box-shadow:0 35px 100px #0007;position:relative;transform:rotate(-.4deg)
+}
+.letter-paper:before{content:"";position:absolute;inset:12px;border:1px solid #d9a9b666;border-radius:22px;pointer-events:none}
+.letter-paper h2{font-size:3rem;margin:0 0 22px;color:#7a304b}
+.letter-paper p{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.65;margin:0 0 18px}
+.signature{text-align:right;color:#7a304b;font-family:"Cormorant Garamond";font-size:1.8rem;margin-top:30px}
+
+.wishes{text-align:center}
+.wish-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+.wish{border:1px solid #ffffff18;background:#ffffff08;border-radius:999px;padding:12px 18px;color:#e8cbd5}
+
+.final{text-align:center}
+.final h2{font-size:clamp(3rem,8vw,6rem);line-height:.95;margin:20px 0}
+.final p{color:var(--muted);max-width:600px;margin:auto;line-height:1.8}
+.btn{
+  border:0;border-radius:999px;padding:15px 24px;margin-top:28px;background:var(--rose);color:#210c16;
+  font-weight:700;cursor:pointer;box-shadow:0 12px 35px #ff7fa344;transition:.25s
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 45px #ff7fa355}
+footer{text-align:center;padding:30px;color:#ffffff55;font-size:.75rem;letter-spacing:.08em}
+
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:20}
+.conf{position:absolute;top:-20px;width:9px;height:15px;animation:fall 3.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+
+@media(max-width:720px){
+  .story-grid{grid-template-columns:1fr}
+  section{padding:70px 18px}
+  .card{padding:27px}
+  .memory{grid-template-columns:52px 1fr}
+  .num{width:45px;height:45px}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<div id="confetti"></div>
+
+<section class="hero">
+  <div class="container reveal">
+    <div class="eyebrow">A little website made with a lot of love</div>
+    <h1>Happy Birthday,<br><span>Sayang</span> <span class="heart">♥</span></h1>
+    <p>
+      Hari ini bukan sekadar hari awak dilahirkan.
+      Hari ini adalah hari dunia menjadi lebih indah sebab awak wujud di dalamnya —
+      dan saya sangat bersyukur kerana perjalanan hidup saya membawa saya kepada awak.
+    </p>
+    <div class="scroll">↓ scroll perlahan-lahan ↓</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="story-grid">
+      <div class="card reveal">
+        <div class="eyebrow">Untuk awak</div>
+        <h2>Kalau saya boleh pilih sekali lagi...</h2>
+        <p class="quote">
+          "...saya tetap akan pilih awak.
+          Dalam sejuta kemungkinan, saya tetap mahu cerita hidup saya
+          mempunyai nama awak di dalamnya."
+        </p>
+      </div>
+      <div class="card reveal">
+        <div class="eyebrow">Terima kasih</div>
+        <h2>Untuk semua perkara kecil.</h2>
+        <p>
+          Terima kasih sebab sentiasa menjadi tempat saya pulang.
+          Terima kasih untuk senyuman, kesabaran, gurauan, pelukan,
+          dan semua perkara kecil yang mungkin nampak biasa —
+          tetapi sebenarnya membuat hidup saya terasa lengkap.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photo-section">
+  <div class="container reveal">
+    <div class="eyebrow">Our little world</div>
+    <h2 style="font-size:4rem;margin:0">Simpan gambar kita di sini 📸</h2>
+    <div class="photo-frame">
+      <img id="couplePhoto" alt="Gambar kenangan kita">
+      <div class="photo-placeholder" id="photoPlaceholder">
+        <b>Gambar paling saya sayang</b>
+        Letakkan gambar pasangan anda di folder <strong>assets</strong><br>
+        dan namakan fail itu <strong>couple.jpg</strong>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <div class="card">
+      <div class="eyebrow">Our story</div>
+      <h2>Antara semua kenangan...</h2>
+      <div class="timeline">
+        <div class="memory"><div class="num">01</div><div><h3>Hari kita bermula</h3><p>Satu permulaan kecil yang akhirnya menjadi salah satu perkara paling bermakna dalam hidup saya.</p></div></div>
+        <div class="memory"><div class="num">02</div><div><h3>Hari-hari yang kita lalui</h3><p>Ada hari yang mudah, ada hari yang mencabar. Tapi paling penting, kita laluinya bersama.</p></div></div>
+        <div class="memory"><div class="num">03</div><div><h3>Hari ini</h3><p>Saya masih di sini. Masih memilih awak. Masih mahu ketawa, membesar dan membina lebih banyak cerita dengan awak.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container letter reveal">
+    <div class="eyebrow" style="text-align:center">A letter for you</div>
+    <div class="letter-paper">
+      <h2>Sayang,</h2>
+      <p>
+        Selamat hari jadi, cinta hati saya. ❤️
+      </p>
+      <p>
+        Saya mungkin tak selalu pandai menyusun kata-kata,
+        tapi saya harap awak tahu betapa berharganya awak dalam hidup saya.
+        Awak bukan sekadar isteri saya — awak adalah tempat saya kembali,
+        orang yang saya mahu kongsi berita baik dan hari yang susah,
+        dan seseorang yang saya mahu ada di sisi saya untuk masa yang sangat panjang.
+      </p>
+      <p>
+        Semoga tahun baru dalam hidup awak dipenuhi ketenangan,
+        kesihatan, rezeki yang luas, impian yang tercapai,
+        dan sebanyak-banyak sebab untuk awak tersenyum.
+      </p>
+      <p>
+        Dan kalau suatu hari nanti kita buka semula website kecil ini,
+        saya harap kita boleh tengok semua ini sambil tersenyum
+        dan berkata, <em>"Kita dah lalui banyak benda bersama."</em>
+      </p>
+      <p>
+        Teruslah pegang tangan saya.
+        Kita jalan sama-sama, perlahan-lahan, sampai hujung usia.
+      </p>
+      <div class="signature">I love you, always. ❤️</div>
+    </div>
+  </div>
+</section>
+
+<section class="wishes">
+  <div class="container reveal">
+    <div class="eyebrow">My wishes for you</div>
+    <h2 style="font-size:4rem;margin:0">Tahun ini, saya doakan...</h2>
+    <div class="wish-list">
+      <div class="wish">❤️ Bahagia</div><div class="wish">🌙 Ketenangan</div>
+      <div class="wish">✨ Impian tercapai</div><div class="wish">🌷 Kesihatan</div>
+      <div class="wish">💫 Rezeki yang luas</div><div class="wish">🏡 Banyak masa bersama</div>
+      <div class="wish">🥰 Lebih banyak senyuman</div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container reveal">
+    <div class="eyebrow">One last thing...</div>
+    <h2>Awak adalah<br><span style="color:var(--rose);font-style:italic">rumah</span> saya.</h2>
+    <p>
+      Happy Birthday, sayang. Terima kasih kerana menjadi sebahagian
+      daripada cerita hidup saya. Semoga cerita kita terus panjang.
+    </p>
+    <button class="btn" onclick="celebrate()">Tekan kalau sayang saya ❤️</button>
+  </div>
+</section>
+
+<footer>Made with love, for the woman I love. ♥</footer>
+
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<90;i++){
+  const s=document.createElement('i'); s.className='star';
+  s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=(Math.random()*3)+'s'; s.style.animationDuration=(2+Math.random()*4)+'s';
+  stars.appendChild(s);
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const img=document.getElementById('couplePhoto');
+img.src='assets/couple.jpg';
+img.onload=()=>{img.style.display='block';document.getElementById('photoPlaceholder').style.display='none'};
+
+function celebrate(){
+  const box=document.getElementById('confetti');
+  for(let i=0;i<100;i++){
+    const c=document.createElement('i'); c.className='conf';
+    c.style.left=Math.random()*100+'%';
+    c.style.background=['#ff7fa3','#f6d59a','#fff5ed','#c98ca5'][Math.floor(Math.random()*4)];
+    c.style.animationDelay=Math.random()*.8+'s';
+    c.style.transform=`rotate(${Math.random()*360}deg)`;
+    box.appendChild(c);
+    setTimeout(()=>c.remove(),4500);
+  }
+}
+</script>
+</body>
 </html>
