@@ -92,6 +92,13 @@ h1 span{color:var(--rose);font-style:italic}
 footer{text-align:center;padding:30px;color:#ffffff55;font-size:.75rem;letter-spacing:.08em}
 
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:20}
+.music-btn{
+  position:fixed;right:20px;bottom:20px;z-index:30;width:52px;height:52px;border-radius:50%;
+  border:1px solid #ffffff22;background:#ffffff12;color:var(--cream);backdrop-filter:blur(12px);
+  cursor:pointer;font-size:1.25rem;box-shadow:0 10px 35px #0005;transition:.25s
+}
+.music-btn:hover{transform:scale(1.06)}
+#yt-player{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none}
 .conf{position:absolute;top:-20px;width:9px;height:15px;animation:fall 3.8s linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
 
@@ -107,6 +114,10 @@ footer{text-align:center;padding:30px;color:#ffffff55;font-size:.75rem;letter-sp
 <body>
 <div id="stars"></div>
 <div id="confetti"></div>
+
+<!-- YouTube birthday soundtrack -->
+<div id="yt-player" aria-hidden="true"></div>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / pause music">♫</button>
 
 <section class="hero">
   <div class="container reveal">
@@ -238,6 +249,39 @@ footer{text-align:center;padding:30px;color:#ffffff55;font-size:.75rem;letter-sp
 <footer>Made with love, for the woman I love. ♥</footer>
 
 <script>
+let player, musicStarted=false, musicReady=false;
+
+function onYouTubeIframeAPIReady(){
+  player = new YT.Player('yt-player', {
+    height:'1', width:'1',
+    videoId:'HFhRWUHGM8s',
+    playerVars:{autoplay:0, controls:0, loop:1, playlist:'HFhRWUHGM8s', playsinline:1},
+    events:{onReady:()=>{musicReady=true;}}
+  });
+}
+
+function toggleMusic(){
+  if(!musicReady) return;
+  if(!musicStarted){
+    player.playVideo();
+    musicStarted=true;
+    document.getElementById('musicBtn').textContent='❚❚';
+  }else{
+    const state=player.getPlayerState();
+    if(state===YT.PlayerState.PLAYING){
+      player.pauseVideo();
+      document.getElementById('musicBtn').textContent='♫';
+    }else{
+      player.playVideo();
+      document.getElementById('musicBtn').textContent='❚❚';
+    }
+  }
+}
+
+const ytScript=document.createElement('script');
+ytScript.src='https://www.youtube.com/iframe_api';
+document.head.appendChild(ytScript);
+
 const stars=document.getElementById('stars');
 for(let i=0;i<90;i++){
   const s=document.createElement('i'); s.className='star';
